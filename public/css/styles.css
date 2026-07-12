@@ -1,0 +1,191 @@
+:root{
+  --navy:#0F2A44;
+  --navy-dark:#081826;
+  --gold:#B9902E;
+  --gold-light:#E7C878;
+  --cream:#F7F3E8;
+  --paper:#FDFBF6;
+  --slate:#33404E;
+  --slate-light:#67707C;
+  --line:#E4DCC8;
+  --radius:10px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--slate);
+  background:var(--paper);
+  line-height:1.6;
+}
+h1,h2,h3{
+  font-family:'Fraunces',serif;
+  color:var(--navy);
+  margin:0 0 .4em;
+  font-weight:600;
+  letter-spacing:-0.01em;
+}
+p{margin:0 0 1em;}
+a{color:inherit;}
+
+.demo-ribbon{
+  background:var(--navy-dark);
+  color:var(--gold-light);
+  text-align:center;
+  font-size:12.5px;
+  padding:6px 12px;
+  letter-spacing:.02em;
+}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--navy);
+  border-bottom:3px solid var(--gold);
+}
+.topbar-inner{
+  max-width:1120px;margin:0 auto;
+  display:flex;align-items:center;gap:28px;
+  padding:14px 24px;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--gold-light);}
+.brand-mark{color:var(--gold-light);display:flex;}
+.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:#fff;}
+.topnav{display:flex;gap:22px;margin-left:8px;flex:1;}
+.topnav a{
+  color:#DCE3EA;text-decoration:none;font-size:14.5px;font-weight:500;
+  padding:6px 2px;border-bottom:2px solid transparent;
+}
+.topnav a:hover{color:#fff;border-color:var(--gold);}
+.nav-cta{
+  background:var(--gold);color:var(--navy-dark);border:none;
+  padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px;
+  cursor:pointer;font-family:inherit;
+}
+.nav-cta:hover{background:var(--gold-light);}
+
+.hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy) 62%,var(--paper) 62%);}
+.hero-inner{
+  max-width:1120px;margin:0 auto;padding:64px 24px 0;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end;
+}
+.eyebrow{
+  color:var(--gold-light);text-transform:uppercase;letter-spacing:.12em;
+  font-size:12.5px;font-weight:600;margin-bottom:14px;
+}
+.hero h1{color:#fff;font-size:44px;line-height:1.08;max-width:11ch;}
+.hero .lede{color:#C9D2DB;font-size:16.5px;max-width:46ch;}
+.hero-actions{display:flex;gap:14px;margin-top:8px;margin-bottom:56px;}
+
+.btn{
+  font-family:inherit;font-weight:600;font-size:14.5px;
+  padding:12px 22px;border-radius:8px;cursor:pointer;text-decoration:none;
+  display:inline-flex;align-items:center;border:1.5px solid transparent;
+}
+.btn-primary{background:var(--gold);color:var(--navy-dark);}
+.btn-primary:hover{background:var(--gold-light);}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4);}
+.btn-ghost:hover{border-color:#fff;}
+
+.agent-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;box-shadow:0 18px 40px rgba(8,24,38,.28);
+  margin-bottom:-40px;
+}
+.agent-card img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:top center;}
+.agent-card-body{padding:18px 20px 22px;}
+.agent-badge{
+  color:var(--gold);text-transform:uppercase;font-size:11px;font-weight:700;
+  letter-spacing:.08em;margin-bottom:4px;
+}
+.agent-name{font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.agent-desc{font-size:14px;color:var(--slate-light);margin-bottom:0;}
+
+.section{padding:88px 24px 72px;}
+.section.alt{background:var(--cream);}
+.section-inner{max-width:1120px;margin:0 auto;}
+.section-inner.narrow{max-width:640px;text-align:center;}
+.section h2{font-size:30px;}
+.section-sub{color:var(--slate-light);max-width:60ch;font-size:15.5px;}
+
+.ledger{border-top:1px solid var(--line);margin-top:28px;}
+.ledger-row{
+  display:flex;justify-content:space-between;gap:24px;
+  padding:16px 4px;border-bottom:1px solid var(--line);
+  font-size:15px;
+}
+.ledger-label{color:var(--slate);}
+.ledger-value{color:var(--navy);font-weight:600;text-align:right;}
+.fineprint{margin-top:22px;font-size:13.5px;color:var(--slate-light);border-left:3px solid var(--gold);padding-left:14px;}
+
+.card-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px;
+}
+.info-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 20px;
+}
+.info-card-eyebrow{color:var(--gold);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}
+.info-card h3{font-size:17px;margin-bottom:8px;}
+.info-card p{font-size:13.8px;color:var(--slate-light);margin-bottom:0;}
+
+.two-col{display:grid;grid-template-columns:1.3fr .8fr;gap:40px;margin-top:28px;align-items:start;}
+.check-list{list-style:none;padding:0;margin:18px 0 0;}
+.check-list li{
+  padding:10px 0 10px 26px;border-bottom:1px solid var(--line);
+  position:relative;font-size:15px;
+}
+.check-list li:before{
+  content:"";position:absolute;left:0;top:16px;width:9px;height:9px;
+  background:var(--gold);border-radius:50%;
+}
+.stat-block{
+  background:var(--navy);color:#fff;border-radius:16px;padding:30px 26px;
+}
+.stat-num{font-family:'Fraunces',serif;font-size:46px;color:var(--gold-light);margin-bottom:6px;}
+.stat-label{font-size:13.5px;color:#C9D2DB;margin-bottom:0;}
+
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.chip{
+  background:#FBEAEA;color:#8A2E2E;border:1px solid #F1C6C6;
+  padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:600;
+}
+
+.site-footer{background:var(--navy-dark);color:#9FAAB4;padding:34px 24px;}
+.site-footer-inner{max-width:1120px;margin:0 auto;font-size:12.5px;line-height:1.7;}
+.site-footer strong{color:#DCE3EA;}
+
+.chat-launcher{
+  position:fixed;right:26px;bottom:26px;z-index:60;
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+}
+.chat-fab-label{
+  font-family:inherit;font-weight:600;font-size:13px;
+  background:var(--paper);color:var(--navy);border:1px solid var(--line);
+  padding:9px 16px;border-radius:999px;cursor:pointer;
+  box-shadow:0 8px 20px rgba(8,24,38,.16);
+}
+.chat-fab-label:hover{border-color:var(--gold);color:var(--gold);}
+.chat-fab{
+  width:58px;height:58px;border-radius:50%;
+  background:var(--gold);color:var(--navy-dark);border:none;
+  box-shadow:0 10px 24px rgba(8,24,38,.35);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.chat-fab:hover{background:var(--gold-light);}
+
+/* Cognigy Webchat overrides: hide its own default launcher (we use our own
+   Support Concierge button above) and reskin the header to match the site,
+   regardless of what avatar/title is set on the Cognigy endpoint itself. */
+[data-cognigy-webchat-root] [data-cognigy-webchat] .webchat-toggle-button{display:none !important;}
+[data-cognigy-webchat-root] [data-cognigy-webchat] .webchat-header-bar{background:var(--navy) !important;}
+
+@media (max-width: 860px){
+  .topnav{display:none;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero h1{font-size:34px;max-width:none;}
+  .agent-card{margin-bottom:0;transform:translateY(20px);}
+  .card-grid{grid-template-columns:1fr 1fr;}
+  .two-col{grid-template-columns:1fr;}
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Acme Bank — Demo</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="demo-ribbon">Synthetic demo only — Acme Bank is a fictional institution created for this demonstration</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 40" width="30" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 2L46 15H2L24 2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M6 18V34M16 18V34M32 18V34M42 18V34" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M2 38H46" stroke="currentColor" stroke-width="2.5"/>
+        </svg>
+      </span>
+      <span class="brand-name">Acme&nbsp;Bank</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#hours">Hours &amp; Support</a>
+      <a href="#accounts">Accounts &amp; Loans</a>
+      <a href="#transfers">Transfers &amp; Limits</a>
+      <a href="#security">Security &amp; Fraud</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-cta" id="openChatTop">Chat with us</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Cognigy AI webchat demo</p>
+        <h1>Banking that actually talks back.</h1>
+        <p class="lede">Ask about hours, accounts, transfers, and loans — any time, in plain language.
+          Our AI agents handle the questions instantly and loop in a specialist the moment things get personal.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="openChatHero">Start a chat</button>
+          <a class="btn btn-ghost" href="#accounts">See what we offer</a>
+        </div>
+      </div>
+      <aside class="agent-card" aria-label="Our agents are here to help">
+        <img src="/img/support-team.jpg" alt="A member of the Acme Bank support team" />
+        <div class="agent-card-body">
+          <p class="agent-badge">Real people, real help</p>
+          <p class="agent-name">Our agents are here to help</p>
+          <p class="agent-desc">Ask about hours, transfers, or accounts any time. Thinking about a loan? We'll connect you with a specialist the moment you're ready to talk numbers.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="hours">
+    <div class="section-inner">
+      <h2>Hours &amp; support</h2>
+      <p class="section-sub">Every hour below reflects the Eastern Time support windows in our demo knowledge base.</p>
+      <div class="ledger">
+        <div class="ledger-row">
+          <span class="ledger-label">Webchat — Monday to Friday</span>
+          <span class="ledger-value">8:00 AM – 8:00 PM ET</span>
+        </div>
+        <div class="ledger-row">
+          <span class="ledger-label">Webchat — Saturday</span>
+          <span class="ledger-value">9:00 AM – 2:00 PM ET</span>
+        </div>
+        <div class="ledger-row">
+          <span class="ledger-label">Branches — Monday to Friday</span>
+          <span class="ledger-value">9:00 AM – 5:00 PM local</span>
+        </div>
+        <div class="ledger-row">
+          <span class="ledger-label">Holidays</span>
+          <span class="ledger-value">Branches closed · webchat answers general questions</span>
+        </div>
+      </div>
+      <p class="fineprint">Lost a card, or think something's wrong with your account? Don't wait for a window — that's escalated to assisted support immediately, any time.</p>
+    </div>
+  </section>
+
+  <section class="section alt" id="accounts">
+    <div class="section-inner">
+      <h2>Accounts &amp; loans</h2>
+      <p class="section-sub">General education only — final rates and eligibility always come from a specialist review.</p>
+      <div class="card-grid">
+        <div class="info-card">
+          <p class="info-card-eyebrow">Everyday banking</p>
+          <h3>Checking, savings &amp; CDs</h3>
+          <p>Balance and transaction lookups are available after identity verification. CD servicing routes to a branch specialist.</p>
+        </div>
+        <div class="info-card">
+          <p class="info-card-eyebrow">Auto loans</p>
+          <h3>New or used vehicles</h3>
+          <p>Talk through down payment, term, and monthly cost versus total cost before you talk to a specialist.</p>
+        </div>
+        <div class="info-card">
+          <p class="info-card-eyebrow">Mortgage loans</p>
+          <h3>Buying or refinancing</h3>
+          <p>Get oriented on down payments, DTI, and documentation, then move to prequalification with a mortgage specialist.</p>
+        </div>
+        <div class="info-card">
+          <p class="info-card-eyebrow">Personal loans</p>
+          <h3>Consolidation &amp; major expenses</h3>
+          <p>Understand how amount, credit profile, and income shape your options before applying.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="transfers">
+    <div class="section-inner">
+      <h2>Transfers &amp; limits</h2>
+      <div class="two-col">
+        <div>
+          <p class="section-sub">Internal transfers between eligible Acme Bank checking and savings accounts are available immediately after identity verification.</p>
+          <ul class="check-list">
+            <li>Up to <strong>$2,500</strong> per transfer</li>
+            <li>Up to <strong>$5,000</strong> per calendar day</li>
+            <li>CD transfers route to a specialist — not handled by the automated assistant</li>
+          </ul>
+        </div>
+        <div class="stat-block">
+          <p class="stat-num">$35</p>
+          <p class="stat-label">Standard overdraft fee, Everyday Checking — ask about alerts and savings-linked coverage to help avoid it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="security">
+    <div class="section-inner">
+      <h2>Security &amp; fraud</h2>
+      <p class="section-sub">Never enter these in chat — with anyone, including us.</p>
+      <div class="chip-row">
+        <span class="chip">Full card number</span>
+        <span class="chip">CVV</span>
+        <span class="chip">Full Social Security number</span>
+        <span class="chip">Online banking password</span>
+      </div>
+      <p class="fineprint">See a charge you don't recognize, or think your account may be compromised? Say so in chat — it's treated as high priority and routed straight to assisted support.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-inner narrow">
+      <h2>Still need a person?</h2>
+      <p class="section-sub">Some things always go to a specialist: wire transfers, account closures, fee reversal review, CD servicing, and anything after a failed identity check.</p>
+      <button class="btn btn-primary" id="openChatContact">Chat with an AI agent now</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p><strong>Acme Bank</strong> is a fictional institution. This site and its chat agents are a synthetic demo built for a Cognigy KnowledgeAI showcase — nothing here is a real account, offer of credit, or financial advice.</p>
+  </div>
+</footer>
+
+<div class="chat-launcher">
+  <button class="chat-fab-label" id="chatFabLabel">Support Concierge</button>
+  <button class="chat-fab" id="chatFab" aria-label="Chat with our Support Concierge">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 12C4 7.58 8.03 4 13 4C17.97 4 22 7.58 22 12C22 16.42 17.97 20 13 20C11.63 20 10.34 19.68 9.2 19.11L4 20.5L5.32 16.15C4.49 14.99 4 13.55 4 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</div>
+
+<script src="/js/cognigy-embed.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
