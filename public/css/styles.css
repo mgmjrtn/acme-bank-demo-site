@@ -65,8 +65,13 @@ a{color:inherit;}
 }
 .nav-cta:hover{background:var(--gold-light);}
 
-.hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy) 62%,var(--paper) 62%);}
+.hero{background:var(--paper);position:relative;overflow:visible;}
+.hero::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:500px;
+  background:var(--navy);z-index:0;
+}
 .hero-inner{
+  position:relative;z-index:1;
   max-width:1120px;margin:0 auto;padding:64px 24px 0;
   display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end;
 }
@@ -185,6 +190,7 @@ a{color:inherit;}
   .topnav{display:none;}
   .hero-inner{grid-template-columns:1fr;}
   .hero h1{font-size:34px;max-width:none;}
+  .hero::before{height:420px;}
   .agent-card{margin-bottom:0;transform:translateY(20px);}
   .card-grid{grid-template-columns:1fr 1fr;}
   .two-col{grid-template-columns:1fr;}

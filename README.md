@@ -121,7 +121,12 @@ it's also the default for manually created services).
 in addition to any custom button you build, unless you explicitly hide it with CSS. The
 hide rule needs an extra attribute selector (`[data-cognigy-webchat-toggle]`) that's easy
 to miss — without it, the rule silently matches nothing and both buttons show up stacked
-on top of each other. Fixed in `public/css/styles.css`.
+on top of each other. Fixed in `public/css/styles.css` — and since widget markup can vary
+slightly by version, `public/js/main.js` now also watches the page directly (a
+MutationObserver, Cognigy's own recommended technique for this) and force-hides the
+native button the instant it appears, as a backup to the CSS rule. If you deploy this and
+still somehow see two buttons, check that the browser is loading the *new* `main.js` and
+`styles.css` (hard-refresh / clear cache) rather than a cached copy of the old deploy.
 
 **Had to click "Start Conversation."** This was a settings bug, not a Cognigy limitation.
 `startBehavior` has to live in its own top-level `startBehavior: { ... }` object — it does
@@ -137,6 +142,14 @@ than the website: open the Flow in Cognigy.AI and confirm there's a node that re
 a `GET_STARTED` input with the "Hi, I'm Mac, your support concierge..." message (or
 whatever trigger your Default Welcome Intent uses — update `getStartedPayload` in
 `cognigy-embed.js` to match if it's not literally `GET_STARTED`).
+
+**Hero headline overlapping the section below.** The navy/cream split in the hero was
+originally done with a background gradient hitting a hardcoded 62% mark — that number was
+only ever correct for one specific height of the agent card next to it. Any time that
+card's copy got longer or shorter, the split point drifted and the headline could spill
+into the cream area. Replaced with a fixed-height navy band (`.hero::before`, 500px
+desktop / 420px mobile) that's independent of the card's height, so this won't break
+again if the card's copy changes.
 
 ## Notes on the mockup content
 
