@@ -178,7 +178,7 @@ a{color:inherit;}
 /* Cognigy Webchat overrides: hide its own default launcher (we use our own
    Support Concierge button above) and reskin the header to match the site,
    regardless of what avatar/title is set on the Cognigy endpoint itself. */
-[data-cognigy-webchat-root] [data-cognigy-webchat] .webchat-toggle-button{display:none !important;}
+[data-cognigy-webchat-root] [data-cognigy-webchat] [data-cognigy-webchat-toggle].webchat-toggle-button{display:none !important;}
 [data-cognigy-webchat-root] [data-cognigy-webchat] .webchat-header-bar{background:var(--navy) !important;}
 
 @media (max-width: 860px){

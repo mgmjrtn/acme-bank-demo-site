@@ -32,17 +32,18 @@ function initCognigyWebchat() {
         primaryColor: "#B9902E",
         primaryContrastColor: "#0F2A44"
       },
-      behavior: {
-        enableTypingIndicator: true,
-        startBehavior: "none"
-      },
       widgetSettings: {
         title: "Support Concierge",
         useOtherAgentLogo: false
       },
-      layout: {
-        // template 1 = bottom-right widget, which matches this site's floating button
-        widgetIcon: "chat"
+      // "injection" auto-sends the get-started payload the instant the widget opens,
+      // so the flow's welcome/greeting response shows immediately — no "Start
+      // Conversation" button click required. GET_STARTED is the same payload Cognigy's
+      // own default button already sends, so no Flow changes should be needed.
+      startBehavior: {
+        startBehavior: "injection",
+        getStartedPayload: "GET_STARTED",
+        getStartedText: ""
       },
       embeddingConfiguration: {
         awaitEndpointConfig: false

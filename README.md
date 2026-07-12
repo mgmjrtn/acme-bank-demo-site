@@ -115,6 +115,29 @@ git push
 Render auto-deploys on push (that's what `autoDeploy: true` in `render.yaml` does, and
 it's also the default for manually created services).
 
+## 6. Two bugs fixed after the first Render deploy
+
+**Double chat bubble.** Cognigy's Webchat v3 renders its own default launcher button
+in addition to any custom button you build, unless you explicitly hide it with CSS. The
+hide rule needs an extra attribute selector (`[data-cognigy-webchat-toggle]`) that's easy
+to miss — without it, the rule silently matches nothing and both buttons show up stacked
+on top of each other. Fixed in `public/css/styles.css`.
+
+**Had to click "Start Conversation."** This was a settings bug, not a Cognigy limitation.
+`startBehavior` has to live in its own top-level `startBehavior: { ... }` object — it does
+**not** go inside a `behavior` object (that was the mistake in the first version of
+`cognigy-embed.js`). With the key in the wrong place, Cognigy silently ignored it and fell
+back to the endpoint's own default (a "Get Started" button). It's now set to
+`startBehavior: "injection"`, which sends the same `GET_STARTED` payload the button used to
+send, but does it automatically the instant the widget opens — so the greeting appears
+immediately and the visitor can just reply.
+
+If the greeting still doesn't appear after this fix, that points to the Flow side rather
+than the website: open the Flow in Cognigy.AI and confirm there's a node that responds to
+a `GET_STARTED` input with the "Hi, I'm Mac, your support concierge..." message (or
+whatever trigger your Default Welcome Intent uses — update `getStartedPayload` in
+`cognigy-embed.js` to match if it's not literally `GET_STARTED`).
+
 ## Notes on the mockup content
 
 Every fact on the page (hours, transfer limits, overdraft fee, security rules, loan

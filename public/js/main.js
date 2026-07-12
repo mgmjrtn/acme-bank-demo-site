@@ -2,9 +2,15 @@
   var chatTriggerIds = ["openChatTop", "openChatHero", "openChatContact", "chatFab", "chatFabLabel"];
 
   function openChat() {
-    if (window.acmeWebchat && typeof window.acmeWebchat.open === "function") {
-      window.acmeWebchat.open();
-      return;
+    if (window.acmeWebchat) {
+      if (typeof window.acmeWebchat.toggle === "function") {
+        window.acmeWebchat.toggle();
+        return;
+      }
+      if (typeof window.acmeWebchat.open === "function") {
+        window.acmeWebchat.open();
+        return;
+      }
     }
     // Cognigy not configured yet (or still loading) — show a friendly hint instead of doing nothing.
     alert(
